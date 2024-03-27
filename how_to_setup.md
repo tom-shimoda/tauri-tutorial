@@ -1,3 +1,5 @@
+[チュートリアル元](https://zenn.dev/kumassy/books/6e518fe09a86b2)
+
 0. 下準備 [参考](https://tauri.app/v1/guides/getting-started/prerequisites)
 
 - Windows  

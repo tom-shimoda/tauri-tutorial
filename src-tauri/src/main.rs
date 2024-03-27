@@ -8,13 +8,16 @@ fn greet(name: &str) -> String {
 }
 
 #[tauri::command]
-fn simple_command(){
+fn simple_command() {
     println!("I was invoked from JS!");
 }
 
 fn main() {
     tauri::Builder::default()
-        .invoke_handler(tauri::generate_handler![greet])
+        .invoke_handler(tauri::generate_handler![
+            greet,
+            simple_command,
+        ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
