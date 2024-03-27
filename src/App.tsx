@@ -13,7 +13,11 @@ function App() {
     }
 
     function executeCommands() {
-        invoke('simple_command');
+        // invoke('simple_command')
+
+        invoke('command_with_message', {message: 'Hello!'}).then(message => {
+            console.log('command_with_message', message)
+        })
     }
 
     return (
