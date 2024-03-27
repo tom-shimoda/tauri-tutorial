@@ -32,10 +32,13 @@ rustup install stable
 ```
 cd "プロジェクトフォルダを作成したい階層まで移動しておく"
 
-# Tauriプロジェクト作成
+# Tauriプロジェクト作成 **初回のみ**
 npm create tauri-app@latest
 
-# 作成するアプリ情報を設定
+# 必要なnode moduleをプロジェクトフォルダにインストール **cloneしてきた際も必要**
+npm install --save-dev @tauri-apps/cli
+
+# 作成するアプリ情報を設定 **初回のみ**
 npm run tauri init
 
 # コマンドライン上で実行
