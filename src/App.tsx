@@ -13,11 +13,29 @@ function App() {
     }
 
     function executeCommands() {
+        // 1. 引数なし返り値なし
         // invoke('simple_command')
 
-        invoke('command_with_message', {message: 'Hello!'}).then(message => {
-            console.log('command_with_message', message)
-        })
+        // 2. 引数あり返り値あり
+        // invoke('command_with_message', {message: 'Hello!'}).then(message => {
+        //     console.log('command_with_message', message)
+        // })
+
+        // 3. Serializeしたオブジェクト
+        // invoke('command_with_object', {message: {field_str: 'Hello!!', field_u32: 12}}).then(message => {
+        //     console.log('command_with_object', message)
+        // })
+
+        // 4. Result型で返す
+        for (let arg of [1, 2]) {
+            invoke('command_with_error', {arg})
+                .then(message => {
+                    console.log('command_with_error', message)
+                })
+                .catch(message => {
+                    console.error('command_with_error', message)
+                })
+        }
     }
 
     return (
