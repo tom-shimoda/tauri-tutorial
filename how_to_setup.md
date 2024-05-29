@@ -70,6 +70,10 @@ npm run tauri dev
 
 3. RustRoverの設定 [参考](https://tauri.app/v1/guides/debugging/rustrover/)
 
+設定後の実行方法
+  1. Run Dev Serverをビルド実行した状態にする
+  2. Run Tauri Appを実行
+
 ---
 
 4. その他
